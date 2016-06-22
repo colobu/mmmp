@@ -1,33 +1,47 @@
-/*util.css*/
-/*basehack*/
-*{margin: 0;padding: 0}
-html{font-family: "Helvetica Neue", Helvetica, "STHeiTi", "Microsoft YaHei" sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%}
-article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display: block}
-audio,canvas,progress,video{display: inline-block}
-audio:not([controls]){display: none;height: 0}
-progress{vertical-align: baseline}
-template,[hidden]{display: none}
-a{background-color: transparent;-webkit-text-decoration-skip: objects}
-a:active,a:hover{outline-width: 0}
-abbr[title]{border-bottom: none;text-decoration: underline;text-decoration: underline dotted}
-b,strong{font-weight: inherit;font-weight: bolder}
-dfn{font-style: italic}
-mark{background-color: #ff0;color: #000}
-img{border-style: none}
-svg:not(:root){overflow: hidden}
-hr{box-sizing: content-box;height: 0;overflow: visible}
-button,input,select,textarea{font: inherit;margin: 0}
-button,select{text-transform: none}
-button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance: button}
-button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style: none;padding: 0}
-button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline: 1px dotted ButtonText}
-textarea{overflow: auto}
-[type="checkbox"],[type="radio"]{box-sizing: border-box;padding: 0}
-[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height: auto}
-[type="search"]{-webkit-appearance: textfield;outline-offset: -2px}
-[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance: none}
-::-webkit-input-placeholder{color: inherit;opacity: 0.54}
-::-webkit-file-upload-button{-webkit-appearance: button;font: inherit}
-
 /*util*/
-html,body{max-width: 750px;}
+html,body{background: #e6e6e6;margin: 0 auto;position: relative;font-family: "Helvetica Neue", Helvetica, "STHeiTi", "Microsoft YaHei", sans-serif!important;min-height: 100%;}
+html{color: #666;background: #999;line-height: 1.4;}
+
+.container{margin: 0 0 0.4rem;padding: 0.32rem;background: #fff;position: relative;}
+.titleH1{font-size: 16px;color: #333;text-align: center;padding: 0 1.8rem;margin: 0 0 8px;}
+[data-dpr="2"] .titleH1{font-size: 32px;margin: 0 0 16px;}
+[data-dpr="3"] .titleH1{font-size: 48px;margin: 0 0 24px;}
+.conL5{font-size: 14px;line-height: 1.6;color: #666;text-align:justify;position: relative;}
+[data-dpr="2"] .conL5{font-size: 28px;}
+[data-dpr="3"] .conL5{font-size: 42px;}
+
+#courseInfor dt{font-size: 14px;color: #666;margin: 0.7rem 0 0.2rem;}
+#courseInfor dt:first-child{margin-top: 0;}
+[data-dpr="2"] #courseInfor dt{font-size: 28px;}
+[data-dpr="3"] #courseInfor dt{font-size: 42px;}
+#courseInfor .focusOn{font-size: 12px;color: #feb310;padding: 1px 12px;border-radius: 16px;border: 1px solid #feb310;margin-left: 0.5rem;}
+[data-dpr="2"] #courseInfor .focusOn{font-size: 24px;padding: 2px 24px;border-radius: 32px;border: 2px solid #feb310;}
+[data-dpr="3"] #courseInfor .focusOn{font-size: 36px;padding: 3px 36px;border-radius: 48px;border: 3px solid #feb310;}
+#courseInfor dd{font-size: 16px;color: #333;}
+[data-dpr="2"] #courseInfor dd{font-size: 32px;}
+[data-dpr="3"] #courseInfor dd{font-size: 48px;}
+
+#courseSignList .total{font-size: 0.4rem;color: #666;margin-bottom: 0.2rem;text-align: center;}
+.courseSignUl li{border-bottom: 1px solid #ccc;position: relative;line-height: 50px;height: 50px;margin-top: 5px;padding: 0 0.2rem;}
+.courseSignUl li:first-child{margin-top: 0!important;}
+[data-dpr="2"] .courseSignUl li{border-bottom: 2px solid #ccc;line-height: 100px;height: 100px;margin-top: 10px;}
+[data-dpr="3"] .courseSignUl li{border-bottom: 3px solid #ccc;line-height: 150px;height: 150px;margin-top: 15px;}
+.courseSignUl .name{font-size: 16px;color: #333;margin-right: 10px;}
+[data-dpr="2"] .courseSignUl .name{font-size: 32px;margin-right: 20px;}
+[data-dpr="3"] .courseSignUl .name{font-size: 48px;margin-right: 30px;}
+.courseSignUl .age{font-size: 12px;color: #666;}
+[data-dpr="2"] .courseSignUl .age{font-size: 24px;}
+[data-dpr="3"] .courseSignUl .age{font-size: 36px;}
+.courseSignUl .time{font-size: 14px;color: #999;position: absolute;right: 0.2rem;top: 0;}
+[data-dpr="2"] .courseSignUl .time{font-size: 28px;}
+[data-dpr="3"] .courseSignUl .time{font-size: 42px;}
+#courseSignList .all{font-size: 0.4rem;color: #666;margin: 0.4rem 0 0.1rem;text-align: center;}
+
+#courseSignBtn{border-top: 5px solid #fff;background: #feb310;color: #fff;text-align: center;}
+[data-dpr="2"] #courseSignBtn{border-top: 10px solid #fff;}
+[data-dpr="3"] #courseSignBtn{border-top: 15px solid #fff;}
+#courseSignBtn .text{font-size: 0.48rem;line-height: 0.6rem;padding-top: 0.3rem;}
+#courseSignBtn .time{font-size: 0.32rem;line-height: 0.6rem;padding-bottom: 0.1rem;}
+
+.bannerWarp img{width: 100%;display: block;}
+.bannerWarp .swiper-container{height: 7.73rem;}
