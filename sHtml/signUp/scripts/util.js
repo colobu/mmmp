@@ -1,4 +1,0 @@
-// util.js
-$(function(){
-	
-})
