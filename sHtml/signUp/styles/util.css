@@ -6,9 +6,18 @@ html{color: #666;background: #999;line-height: 1.4;}
 .titleH1{font-size: 16px;color: #333;text-align: center;padding: 0 1.8rem;margin: 0 0 8px;}
 [data-dpr="2"] .titleH1{font-size: 32px;margin: 0 0 16px;}
 [data-dpr="3"] .titleH1{font-size: 48px;margin: 0 0 24px;}
-.conL5{font-size: 14px;line-height: 1.6;color: #666;text-align:justify;position: relative;}
-[data-dpr="2"] .conL5{font-size: 28px;}
-[data-dpr="3"] .conL5{font-size: 42px;}
+.conL5{font-size: 14px;line-height: 1.6;color: #666;text-align:justify;position: relative;
+max-height: 112px;overflow: hidden;}
+[data-dpr="2"] .conL5{font-size: 28px;max-height: 224px;}
+[data-dpr="3"] .conL5{font-size: 42px;max-height: 336px;}
+.conL5.opened{max-height: none;}
+[data-dpr="2"] .conL5.opened{max-height: none;}
+[data-dpr="3"] .conL5.opened{max-height: none;}
+.conL5 a.toggleMore{color: #feb310;}
+.conL5 a.toggleMore .close{display: none;}
+.conL5.opened a.toggleMore .close{display: inline;}
+.conL5.opened a.toggleMore .open{display: none;}
+
 
 #courseInfor dt{font-size: 14px;color: #666;margin: 0.7rem 0 0.2rem;}
 #courseInfor dt:first-child{margin-top: 0;}
@@ -45,3 +54,5 @@ html{color: #666;background: #999;line-height: 1.4;}
 
 .bannerWarp img{width: 100%;display: block;}
 .bannerWarp .swiper-container{height: 7.73rem;}
+
+.moreblank{margin-right: 50px;}
