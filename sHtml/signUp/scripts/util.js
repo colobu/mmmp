@@ -1,7 +1,16 @@
 // util.js
 $(function(){
+	reSize();
 	var conL5 = $('.conL5');
 	conDot(conL5);
+
+	$('.radioBox').on('click', function(){
+		$(this).addClass('checked').siblings().removeClass('checked');
+		$(this).find('input[type="radio"]').click();
+	})
+	$('input[type="radio"]').click(function(event){
+		event.stopPropagation();
+	})
 })
 
 
@@ -49,4 +58,12 @@ function conDot(dotme){
 		);
 
 	})
+}
+
+function reSize(){
+	var winH = $(window).height();
+	var bodyH = $('body').height();
+	if (bodyH<winH) {
+		$('body').addClass('neHeight').css('height',winH);
+	};
 }

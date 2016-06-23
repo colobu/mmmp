@@ -21,56 +21,60 @@
 
 </head>
 <body>
-	<div id="courseBanner" class="bannerWarp">
-		<div class="swiper-container">
-		    <div class="swiper-wrapper">
-		        <div class="swiper-slide"><img src="./images/banner01.jpg"></div>
-		        <div class="swiper-slide"><img src="./images/banner02.jpg"></div>
-		        <div class="swiper-slide"><img src="./images/banner01.jpg"></div>
-		        <div class="swiper-slide"><img src="./images/banner02.jpg"></div>
-		    </div>
-		    <div class="swiper-pagination"></div>
+	<div id="courseWrap">
+		<div id="courseBanner" class="bannerWarp">
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="./images/banner01.jpg"></div>
+			        <div class="swiper-slide"><img src="./images/banner02.jpg"></div>
+			        <div class="swiper-slide"><img src="./images/banner01.jpg"></div>
+			        <div class="swiper-slide"><img src="./images/banner02.jpg"></div>
+			    </div>
+			    <div class="swiper-pagination"></div>
+			</div>
+			<script>        
+			  var mySwiper = new Swiper ('.swiper-container', {
+			    loop: false,
+			    pagination: '.swiper-pagination',
+			  })        
+			</script>
 		</div>
-		<script>        
-		  var mySwiper = new Swiper ('.swiper-container', {
-		    loop: false,
-		    pagination: '.swiper-pagination',
-		  })        
-		</script>
-	</div>
-	<div id="courseIntro" class="container">
-		<h1 class="titleH1">优优宝贝野外求生培训课</h1>
-		<div class="conL5">
-			<p>优优宝贝野外求生培训课是专门针对8-14岁孩子在野外与家长走失后如何应对开设的课程，</p>
-			<p>共分为6优优宝贝野外求生培训课是专门针对8-14岁孩子在野外与家长走失后如何应对开设的课程，共分为</p>
-			<p>共分为6优优宝贝野外求生培训课是专门针对8-14岁孩子在野外与家长走失后应对开设的课程。</p>
+		<div id="courseIntro" class="container">
+			<h1 class="titleH1">优优宝贝野外求生培训课</h1>
+			<div class="conL5">
+				<p>优优宝贝野外求生培训课是专门针对8-14岁孩子在野外与家长走失后如何应对开设的课程，</p>
+				<p>共分为6优优宝贝野外求生培训课是专门针对8-14岁孩子在野外与家长走失后如何应对开设的课程，共分为</p>
+				<p>共分为6优优宝贝野外求生培训课是专门针对8-14岁孩子在野外与家长走失后应对开设的课程。</p>
+			</div>
+		</div>
+		<div id="courseInfor" class="container">
+			<dl>
+				<dt>主办方</dt>
+				<dd>优优宝贝<a class="focusOn" href="#">详情</a></dd>
+				<dt>开课时间</dt>
+				<dd>2016 年 6 月 30 日 12:00</dd>
+				<dt>开课地点</dt>
+				<dd>苏州市园区1号</dd>
+				<dt>报名截止时间</dt>
+				<dd>2016 年 6 月 30 日 12:00</dd>
+			</dl>
+		</div>
+		<div id="courseSignList" class="container">
+			<div class="total">已有 <span>15</span> 人报名</div>
+			<ul class="courseSignUl">
+				<li><span class="name">小明</span><span class="sex male"><i class="iconfont">&#xe601;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+				<li><span class="name">小红</span><span class="sex famale"><i class="iconfont">&#xe600;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+				<li><span class="name">小明</span><span class="sex male"><i class="iconfont">&#xe601;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+				<li><span class="name">小红</span><span class="sex famale"><i class="iconfont">&#xe600;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+			</ul>
+			<div class="all">查看全部</div>
+		</div>
+		<div id="courseSignBtn">
+			<p class="text">马上报名</p>
+			<p class="time">距离报名截止还有 <span>3</span> 天</p>
 		</div>
 	</div>
-	<div id="courseInfor" class="container">
-		<dl>
-			<dt>主办方</dt>
-			<dd>优优宝贝<a class="focusOn" href="#">详情</a></dd>
-			<dt>开课时间</dt>
-			<dd>2016 年 6 月 30 日 12:00</dd>
-			<dt>开课地点</dt>
-			<dd>苏州市园区1号</dd>
-			<dt>报名截止时间</dt>
-			<dd>2016 年 6 月 30 日 12:00</dd>
-		</dl>
-	</div>
-	<div id="courseSignList" class="container">
-		<div class="total">已有 <span>15</span> 人报名</div>
-		<ul class="courseSignUl">
-			<li><span class="name">小明</span><span class="sex"></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
-			<li><span class="name">小明</span><span class="sex"></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
-			<li><span class="name">小明</span><span class="sex"></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
-		</ul>
-		<div class="all">查看全部</div>
-	</div>
-	<div id="courseSignBtn">
-		<p class="text">马上报名</p>
-		<p class="time">距离报名截止还有 <span>3</span> 天</p>
-	</div>
+	
 	<script src="./scripts/util.js"></script>
 </body>
 </html>

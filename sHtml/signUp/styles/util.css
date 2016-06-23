@@ -1,7 +1,21 @@
 /*util*/
-html,body{background: #e6e6e6;margin: 0 auto;position: relative;font-family: "Helvetica Neue", Helvetica, "STHeiTi", "Microsoft YaHei", sans-serif!important;min-height: 100%;}
-html{color: #666;background: #999;line-height: 1.4;}
+html,body{background: #999;margin: 0 auto;position: relative;font-family: "Helvetica Neue", Helvetica, "STHeiTi", "Microsoft YaHei", sans-serif!important;min-height: 100%;}
+html{color: #666;line-height: 1.4;}
+input{font-family: "Helvetica Neue", Helvetica, "STHeiTi", "Microsoft YaHei", sans-serif!important;}
+.blankBox{height: 1px;}
 
+@font-face {
+  font-family: 'iconfont';
+  src: url('http://at.alicdn.com/t/font_1466665309_257366.eot'); /* IE9*/
+  src: url('http://at.alicdn.com/t/font_1466665309_257366.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('http://at.alicdn.com/t/font_1466665309_257366.woff') format('woff'), /* chrome、firefox */
+  url('http://at.alicdn.com/t/font_1466665309_257366.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('http://at.alicdn.com/t/font_1466665309_257366.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{font-family:"iconfont";font-size:inherit;font-style:inherit;color: inherit;}
+
+/*课程页course*/
+#courseWrap{background: #e6e6e6;min-height: 100%;}
 .container{margin: 0 0 0.4rem;padding: 0.32rem;background: #fff;position: relative;}
 .titleH1{font-size: 16px;color: #333;text-align: center;padding: 0 1.8rem;margin: 0 0 8px;}
 [data-dpr="2"] .titleH1{font-size: 32px;margin: 0 0 16px;}
@@ -17,8 +31,7 @@ max-height: 112px;overflow: hidden;}
 .conL5 a.toggleMore .close{display: none;}
 .conL5.opened a.toggleMore .close{display: inline;}
 .conL5.opened a.toggleMore .open{display: none;}
-
-
+/*课程主要信息*/
 #courseInfor dt{font-size: 14px;color: #666;margin: 0.7rem 0 0.2rem;}
 #courseInfor dt:first-child{margin-top: 0;}
 [data-dpr="2"] #courseInfor dt{font-size: 28px;}
@@ -29,7 +42,7 @@ max-height: 112px;overflow: hidden;}
 #courseInfor dd{font-size: 16px;color: #333;}
 [data-dpr="2"] #courseInfor dd{font-size: 32px;}
 [data-dpr="3"] #courseInfor dd{font-size: 48px;}
-
+/*报名列表*/
 #courseSignList .total{font-size: 0.4rem;color: #666;margin-bottom: 0.2rem;text-align: center;}
 .courseSignUl li{border-bottom: 1px solid #ccc;position: relative;line-height: 50px;height: 50px;margin-top: 5px;padding: 0 0.2rem;}
 .courseSignUl li:first-child{margin-top: 0!important;}
@@ -38,6 +51,11 @@ max-height: 112px;overflow: hidden;}
 .courseSignUl .name{font-size: 16px;color: #333;margin-right: 10px;}
 [data-dpr="2"] .courseSignUl .name{font-size: 32px;margin-right: 20px;}
 [data-dpr="3"] .courseSignUl .name{font-size: 48px;margin-right: 30px;}
+.courseSignUl .sex>i.iconfont{font-size: 12px;margin-right: 8px;}
+[data-dpr="2"] .courseSignUl .sex>i.iconfont{font-size: 24px;margin-right: 16px;}
+[data-dpr="3"] .courseSignUl .sex>i.iconfont{font-size: 36px;margin-right: 24px;}
+.courseSignUl .sex.male{color: #10adfe;}
+.courseSignUl .sex.famale{color: #fe4210;}
 .courseSignUl .age{font-size: 12px;color: #666;}
 [data-dpr="2"] .courseSignUl .age{font-size: 24px;}
 [data-dpr="3"] .courseSignUl .age{font-size: 36px;}
@@ -45,14 +63,41 @@ max-height: 112px;overflow: hidden;}
 [data-dpr="2"] .courseSignUl .time{font-size: 28px;}
 [data-dpr="3"] .courseSignUl .time{font-size: 42px;}
 #courseSignList .all{font-size: 0.4rem;color: #666;margin: 0.4rem 0 0.1rem;text-align: center;}
-
+/*报名按钮*/
 #courseSignBtn{border-top: 5px solid #fff;background: #feb310;color: #fff;text-align: center;}
 [data-dpr="2"] #courseSignBtn{border-top: 10px solid #fff;}
 [data-dpr="3"] #courseSignBtn{border-top: 15px solid #fff;}
 #courseSignBtn .text{font-size: 0.48rem;line-height: 0.6rem;padding-top: 0.3rem;}
 #courseSignBtn .time{font-size: 0.32rem;line-height: 0.6rem;padding-bottom: 0.1rem;}
-
+/*轮播*/
 .bannerWarp img{width: 100%;display: block;}
 .bannerWarp .swiper-container{height: 7.73rem;}
 
-.moreblank{margin-right: 50px;}
+
+
+
+/*报名页signup*/
+#signupWrap{background: #ffe5ad;min-height: 100%;box-sizing: border-box;padding: 1.4rem 1rem 0.6rem;}
+#signupBody{margin: 0 0 0.6rem;background: #fff;padding: 0.6rem 1.6rem 1.3rem;}
+#signupBody h1{font-size: 18px;color: #333;text-align: center;font-weight: bolder;}
+[data-dpr="2"] #signupBody h1{font-size: 36px;}
+[data-dpr="3"] #signupBody h1{font-size: 54px;}
+#signupBody dt{font-size: 12px;color: #feb310;margin-left: -24px;margin-top: 18px;}
+[data-dpr="2"] #signupBody dt{font-size: 24px;margin-left: -48px;margin-top: 36px;}
+[data-dpr="3"] #signupBody dt{font-size: 36px;margin-left: -72px;margin-top: 54px;}
+#signupBody dd{margin-top: 14px;}
+[data-dpr="3"] #signupBody dd{margin-top: 28px;}
+[data-dpr="3"] #signupBody dd{margin-top: 42px;}
+#signupBody .inputBox{font-size: 14px;text-align: center;color: 33px;width: 100%;border: none;border-bottom: 1px solid #ccc;line-height: 2;}
+[data-dpr="2"] #signupBody .inputBox{font-size: 28px;border-bottom: 2px solid #ccc;}
+[data-dpr="3"] #signupBody .inputBox{font-size: 42px;border-bottom: 3px solid #ccc;}
+#signupBody .radioBox{font-size: 18px;display: inline-block;width: 50%;text-align: center;font-weight: bolder;color: #ccc;}
+[data-dpr="2"] #signupBody .radioBox{font-size: 36px;}
+[data-dpr="3"] #signupBody .radioBox{font-size: 54px;}
+#signupBody .radioBox.checked.male{color: #10adfe;}
+#signupBody .radioBox.checked.famale{color: #fe4210;}
+input[type="radio"]{display: none;}
+/*报名按钮*/
+#signupBtn{margin: 0;background: #ccc;color: #fff;text-align: center;line-height: 2.4;}
+#signupBtn.on{background: #feb310}
+#signupBtn .text{font-size: 0.5rem;}
