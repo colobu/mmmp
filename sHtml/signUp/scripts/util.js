@@ -11,6 +11,8 @@ $(function(){
 	$('input[type="radio"]').click(function(event){
 		event.stopPropagation();
 	})
+
+	// appDate();
 })
 
 
@@ -66,4 +68,8 @@ function reSize(){
 	if (bodyH<winH) {
 		$('body').addClass('neHeight').css('height',winH);
 	};
+}
+
+function appDate(){
+	
 }
