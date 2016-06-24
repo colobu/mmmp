@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="Expires" CONTENT="0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="七彩部落colobu，微营销报名插件" />
+	<meta name="keywords" content="七彩部落, colobu, 报名, 课程" />
+	<title>公司简介</title>
+
+	<link type="text/css" rel="stylesheet" href="./styles/swiper.min.css" media="screen" />
+	<link type="text/css" rel="stylesheet" href="./styles/util.css" media="screen" />
+
+
+	<script type="text/javascript" src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js"></script>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="./scripts/swiper.jquery.min.js"></script>
+	<script type="text/javascript" src="./scripts/jquery.dotdotdot.min.js"></script>
+
+
+</head>
+<body>
+	<div id="companyWrap">
+		<div id="companyBanner" class="bannerWarp">
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="./images/banner01.jpg"></div>
+			        <div class="swiper-slide"><img src="./images/banner02.jpg"></div>
+			        <div class="swiper-slide"><img src="./images/banner01.jpg"></div>
+			        <div class="swiper-slide"><img src="./images/banner02.jpg"></div>
+			    </div>
+			    <div class="swiper-pagination"></div>
+			</div>
+			<script>        
+			  var mySwiper = new Swiper ('.bannerWarp .swiper-container', {
+			    loop: false,
+			    pagination: '.swiper-pagination',
+			  })        
+			</script>
+		</div>
+		<div id="companyIntro" class="container">
+			<h1 class="titleH1">优优宝贝</h1>
+			<div class="conL5">
+				<p>“优优宝贝”自创立以来通过精心打造，迅速在童装时尚领域崛起，并在童装市场上享有较高的知名度。 优优宝贝童装主要以儿童服装为主、同时开发包括儿童衣帽、鞋袜、玩具、用品等系列产品。品牌素以款式时尚、做工精巧的而著称。为适应日新月异的潮流。</p>
+			</div>
+		</div>
+		<div id="companyTeacher" class="container">
+			<h2 class="titleH1">师资力量</h2>
+			<div class="teacherListWarp1">
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide"><img src="./images/teacher1.jpg"></div>
+				        <div class="swiper-slide"><img src="./images/teacher2.jpg"></div>
+				        <div class="swiper-slide"><img src="./images/teacher3.jpg"></div>
+				        <div class="swiper-slide"><img src="./images/teacher1.jpg"></div>
+				        <div class="swiper-slide"><img src="./images/teacher2.jpg"></div>
+				    </div>
+				</div>
+			</div>
+			<div class="teacherListWarp2">
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide stop-swiping">
+				        	<p><strong>章珩</strong> 曾任职最高人民检察院纪检组，现任国家检察官学院副教授，中国维权联盟主任，北京致公法律援助（研究）中心主任等。</p>
+				        </div>
+				        <div class="swiper-slide stop-swiping">
+				        	 <p><strong>章珩1</strong> 曾任职最高人民检察院纪检组，现任国家检察官学院副教授，中国维权联盟主任，北京致公法律援助（研究）中心主任等。</p>
+				        </div>
+				        <div class="swiper-slide stop-swiping">
+				        	 <p><strong>章珩2</strong> 曾任职最高人民检察院纪检组，现任国家检察官学院副教授，中国维权联盟主任，北京致公法律援助（研究）中心主任等。</p>
+				        </div>
+				        <div class="swiper-slide stop-swiping">
+				        	 <p><strong>章珩3</strong> 曾任职最高人民检察院纪检组，现任国家检察官学院副教授，中国维权联盟主任，北京致公法律援助（研究）中心主任等。</p>
+				        </div>
+				    </div>
+				</div>
+			</div>
+			<script>        
+			  var teacherList1 = new Swiper ('.teacherListWarp1 .swiper-container', {
+			    loop: false,
+			    slidesPerView : 3.5,
+			    spaceBetween : 10,
+			    centeredSlides : true,
+			  })   
+			  var teacherList2 = new Swiper ('.teacherListWarp2 .swiper-container', {
+			    loop: false,
+			    effect: 'fade',
+			    noSwiping : true,
+				noSwipingClass : 'stop-swiping',
+			  })
+			  teacherList1.params.control = teacherList2;   
+			</script>
+		</div>
+		<div id="companyCourse" class="container">
+			<h2 class="titleH1">开设课程</h2>
+			<div class="conL5">
+				<p>夏令营</p>
+				<p>冬令营</p>
+			</div>
+		</div>
+		<div id="companyQR" class="container noMb">
+			<h2 class="titleH1">识别二维码</h2>
+			<p class="caption">获取更多内容</p>
+			<div class="QRimg"><img src="./images/QR.png" width="100%"></div>
+		</div>
+	</div>
+
+	<div class="gobackBtn"><i class="iconfont">&#xe602;</i></div>
+	<script src="./scripts/util.js"></script>
+</body>
+</html>

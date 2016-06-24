@@ -37,122 +37,193 @@
 			<h1>报名表</h1>
 			<dl>
 				<dt>小孩信息：</dt>
-				<dd><input class="inputBox" type="text" placeholder="小名"></dd>
-				<dd><input class="inputBox" type="text" placeholder="出生日期" id="appDate"></dd>
+				<dd><input class="inputBox" id="appNick" type="text" maxlength="6" placeholder="小名"></dd>
+				<dd><input class="inputBox" id="appDate" type="text" placeholder="出生日期"></dd>
 				<dd><div class="radioBox male"><input type="radio" name="sex" value="0">男</div><div class="radioBox famale checked"><input type="radio" name="sex" value="1" checked>女</div></dd>
 				<dt>联系人：</dt>
-				<dd><input class="inputBox" type="text" placeholder="姓名"></dd>
-				<dd><input class="inputBox" type="tel" placeholder="手机号" id="appPhone" oninput="myFunction(this)"></dd>
+				<dd><input class="inputBox" id="appName" type="text" maxlength="6" placeholder="姓名"></dd>
+				<dd><input class="inputBox" id="appPhone" type="tel" maxlength="13" onpaste="return false" placeholder="手机" id="appPhone" oninput="myFunction(this)"></dd>
 			</dl>
 		</div>
 		<div id="signupBtn">
-			<p class="text">请填写完整的报名信息</p>
+			<button class="btn">请填写完整的报名信息</button>
 		</div>
 	</div>
+
+	<div class="gobackBtn"><i class="iconfont">&#xe602;</i></div>
 	<script type="text/javascript">
-	var appPhoneIndex = 0;
-	function myFunction(thisI){
-		var text = thisI.value;
-		var counter = text.length;
-		switch (counter){
-			case 0: appPhoneIndex = 0;break;
-			case 1: 
-				if(!/1/.test(text)){
-					thisI.value='';
-				}else{
-					appPhoneIndex = 1;
-				} break;
-			case 2: 
-				if(!/1\d/.test(text)){
-					thisI.value=text.substring(0,counter-1);
-				}else{
-					appPhoneIndex = 2;
-				} break;
-			case 3: 
-				if(!/1\d{2}/.test(text)){
-					thisI.value=text.substring(0,counter-1);
-				}else if(appPhoneIndex>=3){
-					thisI.value=text.substring(0,counter-1);
-					appPhoneIndex = 2;
-				}else {
-					thisI.value=text+'-';
-					appPhoneIndex = 4;
-				} break;
-			case 4: appPhoneIndex = 4;break;
-			case 5: 
-				if(!/1\d{2}\-\d/.test(text)){
-					thisI.value=text.substring(0,counter-1);
-				}else{
-					appPhoneIndex = 5;
-				} break;
-			case 6: 
-				if(!/1\d{2}\-\d{2}/.test(text)){
-					thisI.value=text.substring(0,counter-1);
-				}else{
-					appPhoneIndex = 6;
-				} break;
-			case 7: 
-				if(!/1\d{2}\-\d{3}/.test(text)){
-					thisI.value=text.substring(0,counter-1);
-				}else{
-					appPhoneIndex = 6;
-				} break;
-			case 8: 
-				if(!/1\d{2}\-\d{4}/.test(text)){
-					thisI.value=text.substring(0,counter-1);
-				}else if(appPhoneIndex>=8){
-					thisI.value=text.substring(0,counter-1);
-					appPhoneIndex = 7;
-				}else {
-					thisI.value=text+'-';
-					appPhoneIndex = 9;
-				} break;
-			case 9: appPhoneIndex = 9;break;
-			case 10: 
-				if(!/1\d{2}\-\d{4}/.test(text)){
-					thisI.value=text.substring(0,counter-1);
-				}else{
-					appPhoneIndex = 8;
-				} break;
-			case 11: 
-				if(!/1\d{2}\-\d{4}/.test(text)){
-					thisI.value=text.substring(0,counter-1);
-				}else{
-					appPhoneIndex = 8;
-				} break;
-			case 12: 
-				if(!/1\d{2}\-\d{4}/.test(text)){
-					thisI.value=text.substring(0,counter-1);
-				}else{
-					appPhoneIndex = 8;
-				} break;
-			case 13: 
-				if(!/1\d{2}\-\d{4}/.test(text)){
-					thisI.value=text.substring(0,counter-1);
-				}else{
-					appPhoneIndex = 8;
-				} break;
-			default: thisI.value=text.substring(0,counter-1);break;
+		// 手机号码输入验证
+		var appPhoneIndex = 0;
+		function myFunction(thisI){
+			var text = thisI.value;
+			var counter = text.length;
+			switch (counter){
+				case 0: appPhoneIndex = 0;break;
+				case 1: 
+					if(!/1/.test(text)){
+						thisI.value='';
+					}else{
+						appPhoneIndex = 1;
+					} break;
+				case 2: 
+					if(!/1\d/.test(text)){
+						thisI.value=text.substring(0,counter-1);
+					}else{
+						appPhoneIndex = 2;
+					} break;
+				case 3: 
+					if(!/1\d{2}/.test(text)){
+						thisI.value=text.substring(0,counter-1);
+					}else if(appPhoneIndex>=3){
+						thisI.value=text.substring(0,counter-1);
+						appPhoneIndex = 2;
+					}else {
+						thisI.value=text+'-';
+						appPhoneIndex = 4;
+					} break;
+				case 4: appPhoneIndex = 4;break;
+				case 5: 
+					if(!/1\d{2}\-\d/.test(text)){
+						thisI.value=text.substring(0,counter-1);
+					}else{
+						appPhoneIndex = 5;
+					} break;
+				case 6: 
+					if(!/1\d{2}\-\d{2}/.test(text)){
+						thisI.value=text.substring(0,counter-1);
+					}else{
+						appPhoneIndex = 6;
+					} break;
+				case 7: 
+					if(!/1\d{2}\-\d{3}/.test(text)){
+						thisI.value=text.substring(0,counter-1);
+					}else{
+						appPhoneIndex = 6;
+					} break;
+				case 8: 
+					if(!/1\d{2}\-\d{4}/.test(text)){
+						thisI.value=text.substring(0,counter-1);
+					}else if(appPhoneIndex>=8){
+						thisI.value=text.substring(0,counter-1);
+						appPhoneIndex = 7;
+					}else {
+						thisI.value=text+'-';
+						appPhoneIndex = 9;
+					} break;
+				case 9: appPhoneIndex = 9;break;
+				case 10: 
+					if(!/1\d{2}\-\d{4}/.test(text)){
+						thisI.value=text.substring(0,counter-1);
+					}else{
+						appPhoneIndex = 8;
+					} break;
+				case 11: 
+					if(!/1\d{2}\-\d{4}/.test(text)){
+						thisI.value=text.substring(0,counter-1);
+					}else{
+						appPhoneIndex = 8;
+					} break;
+				case 12: 
+					if(!/1\d{2}\-\d{4}/.test(text)){
+						thisI.value=text.substring(0,counter-1);
+					}else{
+						appPhoneIndex = 8;
+					} break;
+				case 13: 
+					if(!/1\d{2}\-\d{4}/.test(text)){
+						thisI.value=text.substring(0,counter-1);
+					}else{
+						appPhoneIndex = 8;
+					} break;
+				default: thisI.value=text.substring(0,counter-1);break;
+			}
 		}
-	}
-	$(function(){
+		$(function(){
+			// 日期轮
 			var currYear = (new Date()).getFullYear();
 			var opt={};
 			opt.date = {preset : 'date'};
-			//opt.datetime = { preset : 'datetime', minDate: new Date(2012,3,10,9,22), maxDate: new Date(2014,7,30,15,44), stepMinute: 5  };
 			opt.datetime = {preset : 'datetime'};
 			opt.time = {preset : 'time'};
 			opt.default = {
 				theme: 'android-ics light', //皮肤样式
-		        display: 'modal', //显示方式 
-		        mode: 'scroller', //日期选择模式
+				display: 'modal', //显示方式 
+				mode: 'scroller', //日期选择模式
 				lang:'zh',
-		        startYear:currYear - 20, //开始年份
-		        endYear:currYear //结束年份
+				startYear:currYear - 20, //开始年份
+				endYear:currYear //结束年份
 			};
-
 			$("#appDate").val('').scroller('destroy').scroller($.extend(opt['date'], opt['default']));
-	})
+
+			// 提交事件
+			var $signupBtnBox = $('#signupBtn');
+			var $signupBtn = $signupBtnBox.children('.btn');
+
+			var $inputBox = $('input.inputBox');
+			$inputBox.blur(function(){
+				for(var i=0 ; i<$inputBox.length ; i++){
+					if(!$inputBox.eq(i).val()){
+						$signupBtnBox.removeClass('on');
+						return false;
+					}
+				}
+				$signupBtnBox.addClass('on');
+			})
+			$inputBox.focus(function(){
+				$(this).removeClass('error').siblings('.validationBox').remove();
+			})
+
+			$signupBtn.click(function(){
+				if($signupBtnBox.hasClass('on')){
+					// 去空格
+					var $appNick = $('#appNick');
+					var $appDate = $('#appDate');
+					var $appName = $('#appName');
+					var $appPhone = $('#appPhone');
+					var valNick = $appNick.val();
+					var valDate = $appDate.val().replace(/\s/g,'');
+					var valName = $appName.val();
+					var valPhone = $appPhone.val();
+					// 正则验证
+					// 小名为空,小名大于6个字符
+					if(!valNick.replace(/\s/g,'')){
+						validation($appNick, '* 小名不能为空');
+					}else if(valNick.length>6){
+						validation($appNick, '* 小名不能多于6个字');
+					}
+					// 出生日期为空，出生日期格式不正确
+					if(!valDate){
+						validation($appDate, '* 出生日期不能为空');
+					}else if (!/\d{4}年(0\d|1[0-2])月([0-2]\d|3[0-1])日/.test(valDate)) {
+						validation($appDate, '* 日期格式: xxxx年xx月xx日');
+					};
+					// 姓名为空,姓名大于6个字符
+					if(!valName.replace(/\s/g,'')){
+						validation($appName, '* 姓名不能为空');
+					}else if(valName.length>6){
+						validation($appName, '* 姓名不能多于6个字');
+					}
+					// 手机为空，手机格式不正确
+					if(!valPhone.replace(/\s/g,'')){
+						validation($appPhone, '* 手机不能为空');
+					}else if (!/1\d{2}\-\d{4}\-\d{4}/.test(valPhone)) {
+						validation($appPhone, '* 手机格式: 1xx-xxxx-xxxx');
+					};
+				}else{
+					return false;
+				}
+			})
+
+			function validation(dom, text){
+				if(dom.siblings('.validationBox').length>0){
+					dom.siblings('.validationBox').text(text);
+				}else{
+					dom.after('<div class="validationBox">'+text+'</div>');
+					dom.addClass('error');
+				}
+			}
+				
+		})
 	</script>
 	<script src="./scripts/util.js"></script>
 </body>

@@ -13,6 +13,13 @@ $(function(){
 	})
 
 	// appDate();
+	$('.gobackBtn').on('click',function(){
+		history.go(-1);
+	})
+
+	$('#courseSignBtn').on('click',function(){
+		window.location.href="signup.html"; 
+	})
 })
 
 
