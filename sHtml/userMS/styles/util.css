@@ -1,0 +1,26 @@
+*{margin: 0;padding: 0;}
+html, body{background: #eee;min-width: 1200px;font-family: "Helvetica Neue", Helvetica, "STHeiTi", "Microsoft YaHei", sans-serif;font-size: 14px;}
+input, button{font-family: "Helvetica Neue", Helvetica, "STHeiTi", "Microsoft YaHei", sans-serif;font-size: 14px;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+.container{width: 1200px;margin: 0 auto;}
+.table{display: table;text-align: center;width: 100%;height: 100%;}
+.table-cell{display: table-cell;vertical-align: middle;}
+
+/*footer*/
+#footer{font-size: 14px;line-height: 28px;text-align: center;background: #fff;min-width: 1200px;}
+#footer .container{padding: 10px 0;}
+
+
+/*loginIndex*/
+#loginWarp{width: 100%;min-width: 1200px;position: relative;overflow: hidden;}
+#loginWarp .loginBg{position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: block;}
+#loginWarp .container{height: 100%;position: relative;}
+#loginWarp .logo{margin-bottom: 50px;}
+#loginWarp .form{margin-bottom: 30px;}
+#loginWarp input{line-height: 28px;padding: 8px 20px;width: 260px;border: 1px solid #999;box-shadow: 5px 5px 16px rgba(0,0,0,0.3);margin-right: 30px;border-radius: 2px;}
+#loginWarp button{line-height: 28px;padding: 8px 20px;border: 1px solid #999;background: #59ceff;color: #fff;cursor: pointer;box-shadow: 5px 5px 16px rgba(0,0,0,0.3);border-radius: 2px;}
+#addMe{position: absolute;right: 30px;top: 20px;color: #fff;text-shadow: 5px 5px 16px rgba(0,0,0,0.5);}
+
+
+
