@@ -1,16 +1,26 @@
 *{margin: 0;padding: 0;}
 html, body{background: #eee;min-width: 1200px;font-family: "Helvetica Neue", Helvetica, "STHeiTi", "Microsoft YaHei", sans-serif;font-size: 14px;}
 input, button{font-family: "Helvetica Neue", Helvetica, "STHeiTi", "Microsoft YaHei", sans-serif;font-size: 14px;}
+ul,ol,li{list-style: none;}
 a{text-decoration: none;}
 a:hover{text-decoration: none;}
 .container{width: 1200px;margin: 0 auto;}
 .table{display: table;text-align: center;width: 100%;height: 100%;}
 .table-cell{display: table-cell;vertical-align: middle;}
+.icons{display: block;background: url(../images/icons.png) no-repeat;}
+
+/*header*/
+#header{background: #4c4c4c url(../images/h_banner.jpg) no-repeat center bottom;height: 40px;overflow: hidden;color: #fff;line-height: 28px;padding-bottom: 200px;}
+#header .container{position: relative;}
+#header p{padding: 6px;}
+#header p>span{color: #59ceff;padding: 0 6px;}
+#header button{border: none;background: transparent;color: #fff;cursor: pointer;}
+#header button:hover{color: #59ceff;text-decoration: underline;}
+#header .btnRight{position: absolute;right: 0;top: 0;padding: 6px;}
 
 /*footer*/
 #footer{font-size: 14px;line-height: 28px;text-align: center;background: #fff;min-width: 1200px;}
 #footer .container{padding: 10px 0;}
-
 
 /*loginIndex*/
 #loginWarp{width: 100%;min-width: 1200px;position: relative;overflow: hidden;}
@@ -20,7 +30,98 @@ a:hover{text-decoration: none;}
 #loginWarp .form{margin-bottom: 30px;}
 #loginWarp input{line-height: 28px;padding: 8px 20px;width: 260px;border: 1px solid #999;box-shadow: 5px 5px 16px rgba(0,0,0,0.3);margin-right: 30px;border-radius: 2px;}
 #loginWarp button{line-height: 28px;padding: 8px 20px;border: 1px solid #999;background: #59ceff;color: #fff;cursor: pointer;box-shadow: 5px 5px 16px rgba(0,0,0,0.3);border-radius: 2px;}
-#addMe{position: absolute;right: 30px;top: 20px;color: #fff;text-shadow: 5px 5px 16px rgba(0,0,0,0.5);}
+#addFavorite{position: absolute;right: 30px;top: 20px;color: #fff;text-shadow: 5px 5px 16px rgba(0,0,0,0.5);}
+
+/*body*/
+#body{padding: 20px 0;min-height: 570px;}
+.bodyLeft{float: left;width: 230px;background: #fff url(../images/bodyLeft.png) no-repeat center bottom;height: 570px;}
+.bodyLeft li{border-bottom: 1px solid #ccc;}
+.bodyLeft a{display: block;width: 100%;height: 58px;background: #59ceff;color: #fff;text-align: center;line-height: 58px;font-size: 18px;position: relative;}
+.bodyLeft a .icons-course{background-position: 0 0;width: 20px;height: 20px;position: absolute;top: 19px;left: 30px;}
+.bodyRight{margin-left: 250px;height: 570px;position: relative;}
+
+/*course*/
+.courseHLine{height: 60px;border-bottom: 2px solid #999;background: #fff;line-height: 60px;font-size: 20px;color: #ccc;}
+#courseWarp .cHLli{display: inline-block;width: 180px;height: 100%;color: #333;text-align: center;}
+#courseWarp .cHLli.on{color: #59ceff;}
+#courseWarp .cHLli:hover{color: #59ceff;}
+.courseCon ul{margin-left: -15px;}
+.courseCon li{float: left;width: 226px;height: 226px;background: #fff;margin-top: 10px;margin-left: 15px;}
+.courseCon li a{color: #333;}
+.courseCon li:hover{box-shadow: 2px 2px 5px rgba(0,0,0,0.3);}
+.courseCon .img{height: 130px;overflow: hidden;background: #ddd;}
+.courseCon .state{height: 29px;line-height: 29px;border-bottom: 1px solid #ccc;padding: 0 10px;}
+.courseCon .ing .state{color: #ff5959;}
+.courseCon .ed .state{color: #999;}
+.courseCon .con{padding: 9px 10px;font-size: 16px;line-height: 24px;}
+.courseCon .con>p{text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.courseCon .con>p.total{font-size: 14px;color: #999;}
+
+/*detail*/
+#detailWarp{background:#fff;}
+.detailHLine{height: 60px;border-bottom: 2px solid #999;background: #fff;line-height: 60px;font-size: 20px;color: #333;}
+.detailHLine h2{font-weight: normal;text-align: center;line-height: 60px;font-size: 20px;}
+.detailCon li{height: 60px;font-size: 16px;color: #333;}
+.detailCon li:nth-child(2n-1){background: #e0e0e0;}
+.detailCon li .table .table-cell:first-child{width:135px;}
+.detailCon li .table .table-cell:nth-child(2){width:118px;}
+.detailCon li .table .table-cell:nth-child(3){width:135px;}
+.detailCon li .table .table-cell:nth-child(4){width:100px;}
+.detailCon li .table .table-cell:nth-child(5){width:118px;}
+.detailCon li .table .table-cell:nth-child(6){width:140px;}
+.detailCon li .table .table-cell:nth-child(7){width:100px;}
+.detailCon li .table .table-cell:nth-child(8){width:104px;}
+/*.goState{text-decoration: underline;cursor: pointer;color: #ff5959;position: relative;
+	-webkit-transition: color 0.2s;-moz-transition: color 0.2s;-ms-transition: -color 0.2s;-o-transition: color 0.2s;transition: color 0.2s;}
+.goState.over{color: #333;}*/
+.goState{width: 90px;margin: auto;border: 1px solid #ccc;height: 22px;line-height: 22px;border-radius: 28px;position: relative;font-size: 14px;box-shadow: 2px 2px 8px #ccc;cursor: pointer;}
+.goState .gsCon{width: 100%;height: 100%;overflow: hidden;position: absolute;top: 0;left: 0;color: #fff;}
+.goState .gsCon>span.no{position: absolute;top: 0;left: 0;width: 55px;background: #ff5959;border-radius: 28px 0 0 28px;text-align: left;white-space: nowrap;padding-left: 15px;
+	-webkit-transition: width 0.2s;-moz-transition: width 0.2s;-ms-transition: -width 0.2s;-o-transition: width 0.2s;transition: width 0.2s;
+}
+.goState .gsCon>span.yes{position: absolute;top: 0;right: 0;width: 0px;background: #59ff59;border-radius: 0 28px 28px 0;text-align: right;white-space: nowrap;padding-right: 15px;
+	-webkit-transition: width 0.2s;-moz-transition: width 0.2s;-ms-transition: -width 0.2s;-o-transition: width 0.2s;transition: width 0.2s;
+}
+.goState .gsBtn{width: 10px;height: 10px;border-radius: 30px;background: #ff5959;position: absolute;top: -2px;left: 64px;border: 8px solid #eee;box-shadow: 2px 2px 8px #ccc;
+	-webkit-transition: all 0.2s;-moz-transition: all 0.2s;-ms-transition: -all 0.2s;-o-transition: all 0.2s;transition: all 0.2s;
+}
+.goState.over .gsCon>span.no{width: 0px;}
+.goState.over .gsCon>span.yes{width: 55px;}
+.goState.over .gsBtn{background: #59ff59;left: -2px;}
+.goNote{text-decoration: underline;cursor: pointer;}
 
 
+/*pageCon*/
+.pageCon{position: absolute;right: 20px;bottom: 4px;}
+.pageCon a,.pageCon span{display: inline-block;font-size: 14px;color: #666;padding: 2px 4px;margin-left: 2px;}
+.pageCon span{color: #59ceff;}
+.pageCon a:hover{color: #59ceff;text-decoration: underline;}
 
+
+/*popMask*/
+.popMask{position: fixed;z-index: 99;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.5);display: none;}
+.popRepass{position: fixed;z-index: 100;top: 50%;left: 50%;margin-top: -250px;margin-left: -230px;background: #fff;width: 460px;height: 500px;font-size: 20px;color: #333;display: none;}
+.popRepass h6{text-align: center;line-height: 60px;border-bottom: 1px solid #999;font-size: 20px;color: #333;font-weight: normal;position: relative;}
+.popRepass .icons-close{display: block;width: 20px;height: 20px;background-position: 0 -40px;position: absolute;top: 20px;right: 20px;cursor: pointer;
+	-webkit-transition: -webkit-transform 0.2s;-moz-transition: -moz-transform 0.2s;-ms-transition: -ms-transform 0.2s;-o-transition: -o-transform 0.2s;transition: transform 0.2s;}
+.popRepass .icons-close:hover{-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-ms-transform: rotate(90deg);-o-transform: rotate(90deg);transform: rotate(90deg);
+	-webkit-transition: -webkit-transform 0.2s;-moz-transition: -moz-transform 0.2s;-ms-transition: -ms-transform 0.2s;-o-transition: -o-transform 0.2s;transition: transform 0.2s;}
+.popRepass .inputDiv{padding: 5px 80px 0;}
+.popRepass label{display: block;padding: 10px 0 15px;}
+.popRepass input{width: 258px;padding: 10px 20px;font-size: 14px; color: #333;line-height: 28px;border: 1px solid #999;}
+.popRepass button{width: 298px;height: 48px;border: 1px solid #999;color: #fff;text-align: center;font-size: 20px;background: #59ceff;margin-top: 30px;cursor: pointer;}
+
+.popNote{position: fixed;z-index: 100;top: 50%;left: 50%;margin-top: -250px;margin-left: -230px;background: #fff;width: 460px;height: 500px;font-size: 20px;color: #333;display: none;}
+.popNote h6{text-align: center;line-height: 60px;border-bottom: 1px solid #999;font-size: 20px;color: #333;font-weight: normal;position: relative;}
+.popNote .icons-close{display: block;width: 20px;height: 20px;background-position: 0 -40px;position: absolute;top: 20px;right: 20px;cursor: pointer;
+	-webkit-transition: -webkit-transform 0.2s;-moz-transition: -moz-transform 0.2s;-ms-transition: -ms-transform 0.2s;-o-transition: -o-transform 0.2s;transition: transform 0.2s;}
+.popNote .icons-close:hover{-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-ms-transform: rotate(90deg);-o-transform: rotate(90deg);transform: rotate(90deg);}
+.noteArea{padding: 10px;overflow: hidden;}
+.noteArea textarea{font-size: 14px;color: #333;line-height: 22px;width: 100%;resize: none;border: none;}
+.noteSave{background: #59ceff;color: #fff;border: none;border-radius: 5px;font-size: 14px;line-height: 28px;padding: 0 10px;float: right;}
+.noteRecord{height: 253px;overflow: auto;background: #ededed;border-top: 1px solid #999;}
+.noteTitle{font-size: 16px;color: #999;text-align: center;padding: 10px 0 15px;}
+.noteLi{padding: 15px 0;margin: 0 20px;border-bottom: 1px solid #ccc;font-size: 14px;line-height: 28px;}
+.noteLi .name{float: right;color: #666;}
+.noteLi .con{margin-top: 10px;text-indent: 2em;}
+.noteNomore{font-size: 14px;color: #999;text-align: center;border-top: 1px solid #ccc;margin: 0 20px;padding: 10px 0 15px;}
