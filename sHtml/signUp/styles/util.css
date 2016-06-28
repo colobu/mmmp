@@ -5,6 +5,9 @@ input,button{font-family: "Helvetica Neue", Helvetica, "STHeiTi", "Microsoft YaH
 .blankBox{height: 1px;}
 a{text-decoration: none;}
 a:hover{text-decoration: none!important;}
+body{margin: 0 auto!important;max-width: 640px;}
+[data-dpr="2"] body{max-width: 1280px;}
+[data-dpr="3"] body{max-width: 1920px;}
 
 @font-face {
   font-family: 'iconfont';
@@ -18,7 +21,7 @@ a:hover{text-decoration: none!important;}
 .iconfont{font-family:"iconfont";font-size:inherit;font-style:inherit;color: inherit;}
 
 /**/
-.container{margin: 0 0 0.4rem;padding: 0.32rem;background: #fff;position: relative;}
+.container{padding: 0.32rem;background: #fff;position: relative;}
 .noMb{margin-bottom: 0;}
 .titleH1{font-size: 16px;color: #333;text-align: center;padding: 0 1.8rem;margin: 0 0 8px;}
 [data-dpr="2"] .titleH1{font-size: 32px;margin: 0 0 16px;}
@@ -45,7 +48,9 @@ max-height: 112px;overflow: hidden;}
 
 
 /*课程页course*/
-#courseWrap{background: #e6e6e6;min-height: 100%;}
+#courseWrap{background: #e6e6e6;min-height: 100%;padding-bottom: 80px;}
+[data-dpr="2"] #courseWrap{padding-bottom: 160px;}
+[data-dpr="3"] #courseWrap{padding-bottom: 240px;}
 /*课程主要信息*/
 #courseInfor dt{font-size: 14px;color: #666;margin: 0.7rem 0 0.2rem;}
 #courseInfor dt:first-child{margin-top: 0;}
@@ -79,7 +84,7 @@ max-height: 112px;overflow: hidden;}
 [data-dpr="3"] .courseSignUl .time{font-size: 42px;}
 #courseSignList .all{font-size: 0.4rem;color: #666;margin: 0.4rem 0 0.1rem;text-align: center;}
 /*报名按钮*/
-#courseSignBtn{border-top: 5px solid #fff;background: #feb310;color: #fff;text-align: center;}
+#courseSignBtn{border-top: 5px solid #fff;background: #feb310;color: #fff;text-align: center;position: fixed;bottom: 0;left: 0;width: 100%;z-index: 100;}
 [data-dpr="2"] #courseSignBtn{border-top: 10px solid #fff;}
 [data-dpr="3"] #courseSignBtn{border-top: 15px solid #fff;}
 #courseSignBtn .text{font-size: 0.48rem;line-height: 0.6rem;padding-top: 0.3rem;}
@@ -146,5 +151,5 @@ input[type="radio"]{display: none;}
 #successBtn a{font-size: 18px;box-sizing: border-box;text-align: center;display: inline-block;width: 44%;margin-left: 10%;line-height: 2.2;border-radius: 4px;border: 2px solid #fff;color: #fff;background: transparent;}
 #successBtn a:first-child{margin-left: 0;}
 [data-dpr="2"] #successBtn a{font-size: 36px;border-width: 4px;border-radius: 8px;}
-[data-dpr="2"] #successBtn a{font-size: 54px;border-width: 8px;border-radius: 12px;}
+[data-dpr="3"] #successBtn a{font-size: 54px;border-width: 8px;border-radius: 12px;}
 #successBtn a.red{background: #db464c;border-color: #db464c;}

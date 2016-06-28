@@ -23,7 +23,7 @@ a:hover{text-decoration: none;}
 #footer .container{padding: 10px 0;}
 
 /*loginIndex*/
-#loginWarp{width: 100%;min-width: 1200px;position: relative;overflow: hidden;}
+#loginWarp{width: 100%;min-width: 1200px;position: relative;overflow: hidden;background-image: url(../images/login_bg.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;}
 #loginWarp .loginBg{position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: block;}
 #loginWarp .container{height: 100%;position: relative;}
 #loginWarp .logo{margin-bottom: 50px;}
@@ -125,8 +125,9 @@ a:hover{text-decoration: none;}
 .popNote .icons-close{display: block;width: 20px;height: 20px;background-position: 0 -40px;position: absolute;top: 20px;right: 20px;cursor: pointer;
 	-webkit-transition: -webkit-transform 0.2s;-moz-transition: -moz-transform 0.2s;-ms-transition: -ms-transform 0.2s;-o-transition: -o-transform 0.2s;transition: transform 0.2s;}
 .popNote .icons-close:hover{-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-ms-transform: rotate(90deg);-o-transform: rotate(90deg);transform: rotate(90deg);}
-.noteArea{padding: 10px;overflow: hidden;}
+.noteArea{padding: 10px;overflow: hidden;position: relative;}
 .noteArea textarea{font-size: 14px;color: #333;line-height: 22px;width: 100%;resize: none;border: none;}
+.noteArea .validationBox{position: absolute;left: 10px;bottom: 16px;color: #fd5353;font-size: 12px;text-align: left;}
 .noteSave{background: #59ceff;color: #fff;border: none;border-radius: 5px;font-size: 14px;line-height: 28px;padding: 0 10px;float: right;cursor: pointer;}
 .noteRecord{height: 253px;overflow: auto;background: #ededed;border-top: 1px solid #999;}
 .noteTitle{font-size: 16px;color: #999;text-align: center;padding: 10px 0 15px;}

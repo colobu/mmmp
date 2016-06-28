@@ -155,7 +155,7 @@
 			<p>苏州七彩部落网络科技有限公司 All Rights Reserved.</p>
 			<p>地址：江苏省苏州市吴中区吴中东路175号天域大厦1601</p>
 			<p>苏ICP备16004577</p>
-			<p>客服QQ：143150804</p>
+			<p>客服QQ：2114758845</p>
 		</div>
 	</div>
 
@@ -179,9 +179,9 @@
 		</div>
 	</div>
 	<div class="pop popNote">
-		<h6>修改密码<i class="icons icons-close"></i></h6>
+		<h6>沟通记录<i class="icons icons-close"></i></h6>
 		<div class="noteArea">
-			<textarea placeholder="请填写与用户的沟通情况" rows="6"></textarea>
+			<textarea placeholder="请填写与用户的沟通情况" rows="6" class="noteTextarea"></textarea>
 			<button class="noteSave">保存</button>
 		</div>
 		<div class="noteRecord">
@@ -208,5 +208,23 @@
 	</div>
 
 	<script src="./scripts/util.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// 模拟提交
+			$('.noteSave').on('click',function(){
+				if($('.noteTextarea').val()==''){
+					validation($('.noteTextarea'), '* 请不要提交空内容');
+				}else{
+					alert('已保存沟通记录');
+					$('.popMask').hide();
+					$('.popNote').hide();
+					$('.noteTextarea').val('');
+				}
+			})
+			$('.noteTextarea').focus(function(){
+				$(this).removeClass('error').siblings('.validationBox').remove();
+			})
+		})
+	</script>
 </body>
 </html>

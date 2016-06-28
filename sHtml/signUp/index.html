@@ -105,7 +105,9 @@
 				$('#courseSignBtn').addClass('over');
 				$('#courseSignBtn .text').text('报名已结束');
 			}else{
-				$('#courseSignBtn .time span').text(parseInt(timeDate/1000/60/60/24));
+				var surDays = parseInt(overDate.getTime()/1000/60/60/24)-parseInt(nowDate.getTime()/1000/60/60/24);
+				if (surDays<=0) {surDays=1};
+				$('#courseSignBtn .time span').text(surDays);
 			}
 
 

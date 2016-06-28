@@ -1,11 +1,12 @@
 (function ($) {
+    var whpix = $('html').attr('data-dpr');
     var theme = {
         defaults: {
             dateOrder: 'Mddyy',
             mode: 'mixed',
             rows: 5,
-            width: 70,
-            height: 36,
+            width: 70*whpix,
+            height: 36*whpix,
             showLabel: false,
             useShortLabels: true
         }

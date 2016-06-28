@@ -15,6 +15,7 @@ $(function(){
 	})
 	// 修改备注
 	$('.goNote').on('click',function(){
+		$('.noteTextarea').val('');
 		$('.popMask').show();
 		$('.popNote').show();
 	})
@@ -63,12 +64,14 @@ function loginResize(){
 	var winW = $(window).width();
 	var footH = $('#footer').height();
 	var bodyH = $('body').height();
+	var minH = 350;
 
 	if(bodyH<winH){
-		if((winH-footH)<350){
-			$('#loginWarp').height(350);
+		if((winH-footH)<minH){
+			$('#loginWarp').height(minH);
 		}else{
 			$('#loginWarp').height(winH-footH);
+			console.log(winH-footH);
 		}
 	}
 }
