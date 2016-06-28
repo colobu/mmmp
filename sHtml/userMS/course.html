@@ -37,13 +37,13 @@
 			</div>
 			<div class="bodyRight" id="courseWarp">
 				<div class="courseHLine">
-					<a class="cHLli on" href="#">全部（5）</a>|
-					<a class="cHLli" href="#">进行中（4）</a>|
-					<a class="cHLli" href="#">已结束（1）</a>
+					<a class="cHLli btnAll on" href="javascript:void(0);">全部（5）</a>|
+					<a class="cHLli btnIng" href="javascript:void(0);">进行中（4）</a>|
+					<a class="cHLli btnEd" href="javascript:void(0);">已结束（1）</a>
 				</div>
 				<div class="courseCon">
 					<ul>
-						<li class="ing"><a href="#">
+						<li class="ing"><a href="detail.html">
 							<div class="img"><img src="./images/courseImg.jpg" width="100%" height="100%"></div>
 							<div class="state">正在报名</div>
 							<div class="con">
@@ -51,7 +51,7 @@
 								<p class="total">已报名<span>20</span>人</p>
 							</div>
 						</a></li>
-						<li class="ing"><a href="#">
+						<li class="ing"><a href="detail.html">
 							<div class="img"><img src="./images/courseImg.jpg" width="100%" height="100%"></div>
 							<div class="state">正在报名</div>
 							<div class="con">
@@ -59,7 +59,7 @@
 								<p class="total">已报名<span>20</span>人</p>
 							</div>
 						</a></li>
-						<li class="ing"><a href="#">
+						<li class="ing"><a href="detail.html">
 							<div class="img"><img src="./images/courseImg.jpg" width="100%" height="100%"></div>
 							<div class="state">正在报名</div>
 							<div class="con">
@@ -67,7 +67,7 @@
 								<p class="total">已报名<span>20</span>人</p>
 							</div>
 						</a></li>
-						<li class="ing"><a href="#">
+						<li class="ing"><a href="detail.html">
 							<div class="img"><img src="./images/courseImg.jpg" width="100%" height="100%"></div>
 							<div class="state">正在报名</div>
 							<div class="con">
@@ -75,7 +75,7 @@
 								<p class="total">已报名<span>20</span>人</p>
 							</div>
 						</a></li>
-						<li class="ed"><a href="#">
+						<li class="ed"><a href="detail.html">
 							<div class="img"><img src="./images/courseImg.jpg" width="100%" height="100%"></div>
 							<div class="state">报名结束</div>
 							<div class="con">
@@ -106,7 +106,7 @@
 	</div>
 
 	<div class="popMask"></div>
-	<div class="popRepass">
+	<div class="pop popRepass">
 		<h6>修改密码<i class="icons icons-close"></i></h6>
 		<div class="inputDiv">
 			<label>旧密码</label>
@@ -126,5 +126,24 @@
 	</div>
 
 	<script src="./scripts/util.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// 模拟切换
+			$('.btnAll').on('click',function(){
+				$('.courseCon').find('li').show();
+				$(this).addClass('on').siblings().removeClass('on');
+			})
+			$('.btnIng').on('click',function(){
+				$('.courseCon').find('li.ing').show();
+				$('.courseCon').find('li.ed').hide();
+				$(this).addClass('on').siblings().removeClass('on');
+			})
+			$('.btnEd').on('click',function(){
+				$('.courseCon').find('li.ed').show();
+				$('.courseCon').find('li.ing').hide();
+				$(this).addClass('on').siblings().removeClass('on');
+			})
+		})
+	</script>
 </body>
 </html>

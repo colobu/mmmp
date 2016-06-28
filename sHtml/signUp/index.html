@@ -66,6 +66,17 @@
 				<li><span class="name">小红</span><span class="sex famale"><i class="iconfont">&#xe600;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
 				<li><span class="name">小明</span><span class="sex male"><i class="iconfont">&#xe601;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
 				<li><span class="name">小红</span><span class="sex famale"><i class="iconfont">&#xe600;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+				<li><span class="name">小明</span><span class="sex male"><i class="iconfont">&#xe601;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+				<li><span class="name">小红</span><span class="sex famale"><i class="iconfont">&#xe600;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+				<li><span class="name">小明</span><span class="sex male"><i class="iconfont">&#xe601;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+				<li><span class="name">小红</span><span class="sex famale"><i class="iconfont">&#xe600;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+				<li><span class="name">小明</span><span class="sex male"><i class="iconfont">&#xe601;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+				<li><span class="name">小红</span><span class="sex famale"><i class="iconfont">&#xe600;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+				<li><span class="name">小明</span><span class="sex male"><i class="iconfont">&#xe601;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+				<li><span class="name">小红</span><span class="sex famale"><i class="iconfont">&#xe600;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+				<li><span class="name">小明</span><span class="sex male"><i class="iconfont">&#xe601;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+				<li><span class="name">小红</span><span class="sex famale"><i class="iconfont">&#xe600;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
+				<li><span class="name">小明</span><span class="sex male"><i class="iconfont">&#xe601;</i></span><span class="age">11岁</span><span class="time">6-10 11:00</span></li>
 			</ul>
 			<div class="all">查看全部</div>
 		</div>
@@ -77,5 +88,38 @@
 	
 	<div class="gobackBtn"><i class="iconfont">&#xe602;</i></div>
 	<script src="./scripts/util.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// 模拟查看全部
+			$('.courseSignUl li:lt(5)').show();
+			$('#courseSignList .all').on('click',function(){
+				$('.courseSignUl li').show();
+				$(this).hide();
+			})
+			// 模拟倒计时
+			var nowDate = new Date();
+			var overDate = new Date(2016,5,30,12,00,00);
+			var timeDate = overDate.getTime()-nowDate.getTime();
+
+			if (timeDate<0) {
+				$('#courseSignBtn').addClass('over');
+				$('#courseSignBtn .text').text('报名已结束');
+			}else{
+				$('#courseSignBtn .time span').text(parseInt(timeDate/1000/60/60/24));
+			}
+
+
+
+
+			$('#courseSignBtn').on('click',function(){
+				if(!$(this).hasClass('over')){
+					window.location.href="signup.html"; 
+				}else{
+					alert('报名已结束');
+				}
+			})
+
+		})
+	</script>
 </body>
 </html>

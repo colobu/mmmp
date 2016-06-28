@@ -208,7 +208,13 @@
 						validation($appPhone, '* 手机不能为空');
 					}else if (!/1\d{2}\-\d{4}\-\d{4}/.test(valPhone)) {
 						validation($appPhone, '* 手机格式: 1xx-xxxx-xxxx');
-					};
+					}
+					// 模拟提交
+					if($('.error').length>0){
+						return false;
+					}else{
+						window.location.href='success.html';
+					}
 				}else{
 					return false;
 				}

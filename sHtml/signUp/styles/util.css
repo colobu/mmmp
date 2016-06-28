@@ -59,7 +59,7 @@ max-height: 112px;overflow: hidden;}
 [data-dpr="3"] #courseInfor dd{font-size: 48px;}
 /*报名列表*/
 #courseSignList .total{font-size: 0.4rem;color: #666;margin-bottom: 0.2rem;text-align: center;}
-.courseSignUl li{border-bottom: 1px solid #ccc;position: relative;line-height: 50px;height: 50px;margin-top: 5px;padding: 0 0.2rem;}
+.courseSignUl li{border-bottom: 1px solid #ccc;position: relative;line-height: 50px;height: 50px;margin-top: 5px;padding: 0 0.2rem;display: none;}
 .courseSignUl li:first-child{margin-top: 0!important;}
 [data-dpr="2"] .courseSignUl li{border-bottom: 2px solid #ccc;line-height: 100px;height: 100px;margin-top: 10px;}
 [data-dpr="3"] .courseSignUl li{border-bottom: 3px solid #ccc;line-height: 150px;height: 150px;margin-top: 15px;}
@@ -84,6 +84,9 @@ max-height: 112px;overflow: hidden;}
 [data-dpr="3"] #courseSignBtn{border-top: 15px solid #fff;}
 #courseSignBtn .text{font-size: 0.48rem;line-height: 0.6rem;padding-top: 0.3rem;}
 #courseSignBtn .time{font-size: 0.32rem;line-height: 0.6rem;padding-bottom: 0.1rem;}
+#courseSignBtn.over{background: #ccc;}
+#courseSignBtn.over .text{padding-bottom: 0.3rem;}
+#courseSignBtn.over .time{display: none;}
 
 /*报名页signup*/
 #signupWrap{background: #ffe5ad;min-height: 100%;box-sizing: border-box;padding: 1.4rem 1rem 0.6rem;}
